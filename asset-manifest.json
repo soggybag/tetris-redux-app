@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tetris-redux-app/static/css/main.7e39fefd.chunk.css",
-    "main.js": "/tetris-redux-app/static/js/main.05e25556.chunk.js",
-    "main.js.map": "/tetris-redux-app/static/js/main.05e25556.chunk.js.map",
+    "main.css": "/tetris-redux-app/static/css/main.97450fed.chunk.css",
+    "main.js": "/tetris-redux-app/static/js/main.26b12b1d.chunk.js",
+    "main.js.map": "/tetris-redux-app/static/js/main.26b12b1d.chunk.js.map",
     "runtime~main.js": "/tetris-redux-app/static/js/runtime~main.9f8aec96.js",
     "runtime~main.js.map": "/tetris-redux-app/static/js/runtime~main.9f8aec96.js.map",
-    "static/js/2.2622b67b.chunk.js": "/tetris-redux-app/static/js/2.2622b67b.chunk.js",
-    "static/js/2.2622b67b.chunk.js.map": "/tetris-redux-app/static/js/2.2622b67b.chunk.js.map",
+    "static/js/2.b0015683.chunk.js": "/tetris-redux-app/static/js/2.b0015683.chunk.js",
+    "static/js/2.b0015683.chunk.js.map": "/tetris-redux-app/static/js/2.b0015683.chunk.js.map",
     "index.html": "/tetris-redux-app/index.html",
-    "precache-manifest.ab0eba79eb73e2592be26f31cc45a670.js": "/tetris-redux-app/precache-manifest.ab0eba79eb73e2592be26f31cc45a670.js",
+    "precache-manifest.bd3dd495d94231f21834f62f718fb84d.js": "/tetris-redux-app/precache-manifest.bd3dd495d94231f21834f62f718fb84d.js",
     "service-worker.js": "/tetris-redux-app/service-worker.js",
-    "static/css/main.7e39fefd.chunk.css.map": "/tetris-redux-app/static/css/main.7e39fefd.chunk.css.map"
+    "static/css/main.97450fed.chunk.css.map": "/tetris-redux-app/static/css/main.97450fed.chunk.css.map"
   }
 }

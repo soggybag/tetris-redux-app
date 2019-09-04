@@ -74,14 +74,15 @@ body {
 
 /* Grid Square */
 .grid-square {
-  border-style: solid;
+  /* border-style: solid; */
   width: var(--tile-size);
   height: var(--tile-size);
-  border-width: var(--border-width);
+  border-radius: 50%;
+  /* border-width: var(--border-width);
   border-left-color: var(--border-left-color);
   border-top-color: var(--border-top-color);
   border-right-color: var(--border-right-color);
-  border-bottom-color: var(--border-bottom-color);
+  border-bottom-color: var(--border-bottom-color); */ 
 }
 
 /* Grid Board */
@@ -125,16 +126,38 @@ body {
   display: grid;
   grid-gap: var(--tile-size) var(--tile-size);
   grid-template-columns: var(--col-side) var(--col-center) var(--col-side);
-  grid-template-rows: 100px var(--grid-height) 100px;
   align-self: flex-start;
   grid-template-areas: "h h h"
-                 "l c r"
-                 ". b .";
+                       "l c r"
+                       ". b .";
+}
+
+.score-view {
+  grid-area: h;
+  text-align: left;
+  padding: 1em 0;
+  font-weight: lighter;
+}
+
+.score-view .score {
+  font-size: 2em;
+  margin: 0;
+}
+
+.score-view .score > span {
+  font-weight: normal;
+}
+
+
+.score-view .lines-complete {
+  margin: 0;
 }
 
 /* App-header */
-.App-header {
-  grid-area: h;
+.header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
 }
 
 /* score-board */
@@ -176,4 +199,17 @@ body {
 
 .message-popup.hidden {
   display: none;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
 }

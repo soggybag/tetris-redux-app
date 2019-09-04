@@ -65,14 +65,13 @@ const gameReducer = (state = defaultState(), action) => {
       newState.nextShape = randomShape()
       newState.score = score
       newState.isRunning = isRunning
-      console.log(state)
-      console.log(newState)
-
 
       // TODO: Check and Set level
       // Score increases decrease interval
       // It's important that only a copy of the be passed into checkRows!
-      newState.score = score + checkRows(newGrid)
+      const checkRowsResult = checkRows(newGrid)
+      newState.score = score + checkRowsResult.score
+      newState.linesCleared = checkRowsResult.rowsCleared
 
       return newState
 

@@ -9,8 +9,7 @@ import NextBlock from './components/next-block'
 import ScoreBoard from './components/score-board'
 import Controls from './components/controls'
 import MessagePopup from './components/message-popup'
-
-import './App.css';
+import ScoreView from './components/ScoreView'
 
 const store = createStore(reducers)
 
@@ -18,15 +17,23 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          <header className="App-header">
+        <div>
+          <header className="header">
             <h1 className="App-title">Tetris Redux</h1>
           </header>
-          <GridBoard />
-          <NextBlock />
-          <ScoreBoard />
-          <Controls />
-          <MessagePopup />
+          <div className="App">
+            <ScoreView />
+            <GridBoard />
+            <NextBlock />
+            <ScoreBoard />
+            <Controls />
+            <MessagePopup />
+          </div>
+          <footer className="footer">
+            <div>
+              <p>Footer stuff</p>
+            </div>
+          </footer>
         </div>
       </Provider>
     );

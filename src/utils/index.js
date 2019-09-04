@@ -34,6 +34,7 @@ export const defaultState = () => {
     nextShape: randomShape(),
     isRunning: true,
     score: 0,
+    linesCleared: 0,
     speed: 1000,
     gameOver: false
   }
@@ -105,7 +106,7 @@ export const checkRows = (grid) => {
       grid.unshift(Array(10).fill(0))
     }
   }
-  return points[completedRows]
+  return { score: points[completedRows], rowsCleared: completedRows}
 }
 
 // Define block shapes and their rotations as arrays.

@@ -22,3 +22,7 @@ Play the game [here](https://soggybag.github.io/tetris-redux-app/)
   - Show number of lines to clear before next level
 
 - Put something in the footer...
+
+## Contributions 
+
+Feel to contribute! See our [contributions guide](contributing.md).

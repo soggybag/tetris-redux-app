@@ -1,5 +1,5 @@
 :root {
-  --bg-color: rgba(150, 150, 150, 1);
+  --bg-color: #333;
 
   /* Border Colors */
   --border-left-color: rgba(255, 255, 255, 0.20);
@@ -9,13 +9,13 @@
 
   /* Square Colors */
   --color-0: #eaeaea;
-  --color-1: #ff6600;
-  --color-2: #eec900;
-  --color-3: #0000ff;
-  --color-4: #cc00ff;
-  --color-5: #00ff00;
+  --color-1: #ff802c;
+  --color-2: #eacf36;
+  --color-3: #4e82f9;
+  --color-4: #dc4eff;
+  --color-5: #71e764;
   --color-6: #66ccff;
-  --color-7: #ff0000;
+  --color-7: #ef5656;
 
   --button-color-t: rgba(200, 200, 200, 1);
   --button-color-r: rgba(150, 150, 150, 1);
@@ -37,6 +37,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--color-0);
 }
 
 /* Colors */
@@ -107,11 +109,13 @@ body {
   padding: 0;
   display: block;
   padding: 1em;
-  border-width: 5px;
+  border: none;
+  border-radius: calc(var(--tile-size) / 2);
+  /* border-width: 5px;
   border-top-color: var(--button-color-t);
   border-left-color: var(--button-color-l);
   border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b);
+  border-bottom-color: var(--button-color-b); */
 }
 
 
@@ -163,6 +167,8 @@ body {
 /* score-board */
 .score-board {
   grid-area: r;
+  display: flex;
+  flex-direction: column;
 }
 
 /* controls */
@@ -178,19 +184,39 @@ body {
   height: var(--size);
   text-align: center;
   display: block;
-  border-width: 5px;
+  border-radius: calc(var(--tile-size) / 2);
+  border: none;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-width: 5px;
   border-top-color: var(--button-color-t);
   border-left-color: var(--button-color-l);
   border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b);
+  border-bottom-color: var(--button-color-b); */
+}
+
+.control-button:first-child {
+  margin-left: 0;
+}
+
+.control-button:last-child {
+  margin-right: 0;
+}
+
+.control-button > img {
+  height: 75%;
 }
 
 /* Message Popup */
 .message-popup {
   position: absolute;
-  width: calc(var(--tile-size) * 10);
-  height: calc(var(--tile-size) * 10);
-  background-color: rgba(255, 255, 255, 0.5);
+  /* width: calc(var(--tile-size) * 10);
+  height: calc(var(--tile-size) * 10); */
+  padding: var(--tile-size);
+  border-radius: var(--tile-size);
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   left: 50%;
   top: 50%;
@@ -200,7 +226,6 @@ body {
 .message-popup.hidden {
   display: none;
 }
-
 
 .App {
   text-align: center;

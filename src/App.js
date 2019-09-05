@@ -6,7 +6,7 @@ import reducers from './reducers'
 
 import GridBoard from './components/grid-board'
 import NextBlock from './components/next-block'
-import ScoreBoard from './components/score-board'
+import ScoreBoard from './components/side-bar'
 import Controls from './components/controls'
 import MessagePopup from './components/message-popup'
 import ScoreView from './components/ScoreView'

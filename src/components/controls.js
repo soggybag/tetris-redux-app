@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { moveDown, moveLeft, moveRight, rotate } from '../actions'
 
+import LeftArrow from '../svg/chevron-left-solid.svg'
+import rightArrow from '../svg/chevron-right-solid.svg'
+import rotateIcon from '../svg/sync-alt-solid.svg'
+import downArrow from '../svg/chevron-down-solid.svg'
+
 class Controls extends Component {
 
   render() {
@@ -14,25 +19,25 @@ class Controls extends Component {
           console.log(isRunning, gameOver)
           if (!isRunning || gameOver) { return }
           this.props.moveLeft()
-        }}>Left</button>
+        }}><img src={LeftArrow} /></button>
 
         {/* right */}
         <button className="control-button" onClick={(e) => {
           if (!isRunning || gameOver) { return }
           this.props.moveRight()
-        }}>Right</button>
+        }}><img src={rightArrow} /></button>
 
         {/* rotate */}
         <button className="control-button" onClick={(e) => {
           if (!isRunning || gameOver) { return }
           this.props.rotate()
-        }}>Rotate</button>
+        }}><img src={rotateIcon} /></button>
 
         {/* down */}
         <button className="control-button" onClick={(e) => {
           if (!isRunning || gameOver) { return }
           this.props.moveDown()
-        }}>Down</button>
+        }}><img src={downArrow} /></button>
 
       </div>
     )

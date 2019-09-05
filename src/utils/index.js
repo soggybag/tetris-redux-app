@@ -35,6 +35,7 @@ export const defaultState = () => {
     isRunning: true,
     score: 0,
     linesCleared: 0,
+    level: 1, 
     speed: 1000,
     gameOver: false
   }

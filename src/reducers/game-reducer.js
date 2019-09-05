@@ -12,7 +12,7 @@ import {
   checkRows } from '../utils'
 
 const gameReducer = (state = defaultState(), action) => {
-  const { shape, grid, x, y, rotation, nextShape, score, isRunning } = state
+  const { shape, grid, x, y, rotation, nextShape, score, linesCleared, isRunning } = state
 
   switch(action.type) {
     case ROTATE:
@@ -71,7 +71,7 @@ const gameReducer = (state = defaultState(), action) => {
       // It's important that only a copy of the be passed into checkRows!
       const checkRowsResult = checkRows(newGrid)
       newState.score = score + checkRowsResult.score
-      newState.linesCleared = checkRowsResult.rowsCleared
+      newState.linesCleared = linesCleared + checkRowsResult.rowsCleared
 
       return newState
 

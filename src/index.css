@@ -1,5 +1,8 @@
 :root {
   --bg-color: #333;
+  --color-dark:  #222;
+  --color: #eaeaea;
+  --color-med: rgb(128, 128, 128);
 
   /* Border Colors */
   --border-left-color: rgba(255, 255, 255, 0.20);
@@ -8,7 +11,7 @@
   --border-bottom-color: rgba(0, 0, 0, 0.5);
 
   /* Square Colors */
-  --color-0: #eaeaea;
+  --color-0: #727272;
   --color-1: #ff802c;
   --color-2: #eacf36;
   --color-3: #4e82f9;
@@ -33,12 +36,16 @@
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: var(--bg-color);
-  color: var(--color-0);
+  color: var(--color);
 }
 
 /* Colors */
@@ -108,14 +115,12 @@ body {
 .score-board-button {
   padding: 0;
   display: block;
-  padding: 1em;
+  padding: 0.5em;
   border: none;
   border-radius: calc(var(--tile-size) / 2);
-  /* border-width: 5px;
-  border-top-color: var(--button-color-t);
-  border-left-color: var(--button-color-l);
-  border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b); */
+  font-size: 1em;
+  text-align: center;
+  background-color: var(--color-med);
 }
 
 
@@ -157,11 +162,29 @@ body {
   margin: 0;
 }
 
+#root {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 /* App-header */
 .header {
-  background-color: #222;
+  background-color:var(--color-dark);
   padding: 20px;
   color: white;
+  flex: 1;
+}
+
+.footer {
+  background-color: var(--color-dark);
+  flex: 2;
+  margin-top: 2em;
 }
 
 /* score-board */
@@ -190,11 +213,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border-width: 5px;
-  border-top-color: var(--button-color-t);
-  border-left-color: var(--button-color-l);
-  border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b); */
+  background-color: var(--color-med);
 }
 
 .control-button:first-child {

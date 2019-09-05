@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div>
+        <div className="container">
           <header className="header">
             <h1 className="App-title">Tetris Redux</h1>
           </header>

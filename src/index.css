@@ -2,6 +2,7 @@
   --bg-color: #333;
   --color-dark:  #222;
   --color: #eaeaea;
+  --color-med-1: rgb(160, 160, 160);
   --color-med: rgb(128, 128, 128);
 
   /* Border Colors */
@@ -214,6 +215,14 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--color-med);
+}
+
+.control-button:hover {
+  background-color: var(--color);
+}
+
+.control-button:active {
+  background-color: var(--color-med-1);
 }
 
 .control-button:first-child {

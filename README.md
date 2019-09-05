@@ -10,8 +10,10 @@ Play the game [here](https://soggybag.github.io/tetris-redux-app/)
 - Add keyboard controls
 - Add some styles 
   - Fix the overlay Pase/Game Over dialog
+  - Should not be able to select text on buttons
 - Update this README
 - Save High Score to Local Storage
+- Animate score: should count up to the new value over time
 - Add Levels 
   - Game gets faster 
   - starts with blocks on screen at certain levels

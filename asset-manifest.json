@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tetris-redux-app/static/css/main.04d86a1b.chunk.css",
+    "main.css": "/tetris-redux-app/static/css/main.51f1e030.chunk.css",
     "main.js": "/tetris-redux-app/static/js/main.ffce4bc8.chunk.js",
     "main.js.map": "/tetris-redux-app/static/js/main.ffce4bc8.chunk.js.map",
     "runtime~main.js": "/tetris-redux-app/static/js/runtime~main.9f8aec96.js",
@@ -8,9 +8,9 @@
     "static/js/2.0b5dcb19.chunk.js": "/tetris-redux-app/static/js/2.0b5dcb19.chunk.js",
     "static/js/2.0b5dcb19.chunk.js.map": "/tetris-redux-app/static/js/2.0b5dcb19.chunk.js.map",
     "index.html": "/tetris-redux-app/index.html",
-    "precache-manifest.e4e09d00301e5ff2830188fefa7acc93.js": "/tetris-redux-app/precache-manifest.e4e09d00301e5ff2830188fefa7acc93.js",
+    "precache-manifest.e50d22c062188a20015c86dfdca607d8.js": "/tetris-redux-app/precache-manifest.e50d22c062188a20015c86dfdca607d8.js",
     "service-worker.js": "/tetris-redux-app/service-worker.js",
-    "static/css/main.04d86a1b.chunk.css.map": "/tetris-redux-app/static/css/main.04d86a1b.chunk.css.map",
+    "static/css/main.51f1e030.chunk.css.map": "/tetris-redux-app/static/css/main.51f1e030.chunk.css.map",
     "static/media/chevron-down-solid.svg": "/tetris-redux-app/static/media/chevron-down-solid.2c0862a6.svg",
     "static/media/chevron-left-solid.svg": "/tetris-redux-app/static/media/chevron-left-solid.dc880f17.svg",
     "static/media/chevron-right-solid.svg": "/tetris-redux-app/static/media/chevron-right-solid.1fce7054.svg",

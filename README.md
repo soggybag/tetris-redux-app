@@ -13,6 +13,9 @@ The project was built from the [tutorial here](https://github.com/MakeSchool-Tut
 - Contributing
   - Update [contributions guide](contributing.md)
   - Move todos into issues with tags
+- Design for Mobile
+  - add break point for 360 by 640
+  - adjust to fill screen 
 - Fix bug where Game Over appears when clicking left or right before a block falls into view.
 - Add keyboard controls
 - Add some styles 

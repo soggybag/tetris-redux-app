@@ -266,3 +266,13 @@ body {
 .App-intro {
   font-size: large;
 }
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --tile-size: 18px;
+  }
+
+  body {
+    overflow: hidden;
+  }
+}

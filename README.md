@@ -10,6 +10,9 @@ The project was built from the [tutorial here](https://github.com/MakeSchool-Tut
 
 ## Todo
 
+- Contributing
+  - Update [contributions guide](contributing.md)
+  - Move todos into issues with tags
 - Fix bug where Game Over appears when clicking left or right before a block falls into view.
 - Add keyboard controls
 - Add some styles 

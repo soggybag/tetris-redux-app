@@ -1,4 +1,4 @@
-I # Tetris Redux App
+# Tetris Redux App
 
 This is an implementation of the arcade game Tetris with React and Redux. 
 

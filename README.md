@@ -10,9 +10,7 @@ The project was built from the [tutorial here](https://github.com/MakeSchool-Tut
 
 ## Todo
 
-- Contributing
-  - Update [contributions guide](contributing.md)
-  - Move todos into issues with tags
+- Add Hacktoberfest label to issues
 - Design for Mobile
   - add break point for 360 by 640
   - adjust to fill screen 

@@ -15,12 +15,6 @@ The project was built from the [tutorial here](https://github.com/MakeSchool-Tut
   - Move todos into issues with tags
 - Update this README
 - Animate score: should count up to the new value over time
-- Add Levels 
-  - Game gets faster 
-  - starts with blocks on screen at certain levels
-  - Clearing a level requires clearing a number of rows
-  - Show level at the top of sidebar
-  - Show number of lines to clear before next level
 
 ## Contributions 
 

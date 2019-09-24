@@ -25,11 +25,6 @@ The project was built from the [tutorial here](https://github.com/MakeSchool-Tut
   - Show level at the top of sidebar
   - Show number of lines to clear before next level
 
-- Put something in the footer...
-  - Links 
-    - Info on Tetris and history of Tetris
-    - Link to source tutorial
-
 ## Contributions 
 
 Feel to contribute! See our [contributions guide](contributing.md).

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 function ScoreView(props) {
   return (
-    <div className="score-view">
+    <div className="score-view not-selectable">
       <p className="score">Score: <span>{props.score}</span></p>
       <p className="lines-complete">Lines: Cleared: {props.linesCleared}</p>
     </div>

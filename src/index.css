@@ -49,6 +49,13 @@ body {
   color: var(--color);
 }
 
+.not-selectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+}
+
 /* Colors */
 .color-0 {
   background-color: var(--color-0);

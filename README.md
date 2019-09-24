@@ -13,7 +13,6 @@ The project was built from the [tutorial here](https://github.com/MakeSchool-Tut
 - Contributing
   - Update [contributions guide](contributing.md)
   - Move todos into issues with tags
-- Add keyboard controls
 - Add some styles 
   - Fix the overlay Pase/Game Over dialog
   - Should not be able to select text on buttons

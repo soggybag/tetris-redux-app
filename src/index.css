@@ -235,6 +235,7 @@ body {
 
 .control-button > img {
   height: 75%;
+  width: var(--size);
 }
 
 /* Message Popup */

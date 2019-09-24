@@ -17,7 +17,6 @@ The project was built from the [tutorial here](https://github.com/MakeSchool-Tut
   - Fix the overlay Pase/Game Over dialog
   - Should not be able to select text on buttons
 - Update this README
-- Save High Score to Local Storage
 - Animate score: should count up to the new value over time
 - Add Levels 
   - Game gets faster 

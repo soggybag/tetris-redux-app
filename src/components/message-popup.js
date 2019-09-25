@@ -26,7 +26,7 @@ class MessagePopup extends Component {
     }
 
     return (
-      <div className={`message-popup ${isHidden}`}>
+      <div className={`message-popup ${isHidden} not-selectable`}>
         <h1>{message}</h1>
         <p></p>
       </div>

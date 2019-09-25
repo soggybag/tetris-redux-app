@@ -10,6 +10,7 @@ import ScoreBoard from './components/side-bar'
 import Controls from './components/controls'
 import MessagePopup from './components/message-popup'
 import ScoreView from './components/ScoreView'
+import Footer from './components/Footer'
 
 const store = createStore(reducers)
 
@@ -29,11 +30,7 @@ class App extends Component {
             <Controls />
             <MessagePopup />
           </div>
-          <footer className="footer">
-            <div>
-              <p>Footer stuff</p>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </Provider>
     );
@@ -44,3 +41,4 @@ export default App;
 
 // Testing with
 // https://blog.bitsrc.io/testing-your-react-app-with-puppeteer-and-jest-c72b3dfcde59
+

@@ -178,7 +178,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 }
 
 /* App-header */
@@ -273,6 +272,27 @@ body {
 
 .App-intro {
   font-size: large;
+}
+
+.page-footer {
+  display: flex;
+}
+
+a:visited {
+  color: var(--color-med-1);
+}
+
+.footer-container {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  justify-content: center;
+  /* height: 100%; */
+}
+
+.row {
+  margin-top: 4em;
+  margin-left: 4em;
 }
 
 @media only screen and (max-width: 600px) {

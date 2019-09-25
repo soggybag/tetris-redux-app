@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { moveDown, moveLeft, moveRight, rotate } from '../actions'
 
-import LeftArrow from '../svg/chevron-left-solid.svg'
+import leftArrow from '../svg/chevron-left-solid.svg'
 import rightArrow from '../svg/chevron-right-solid.svg'
 import rotateIcon from '../svg/sync-alt-solid.svg'
 import downArrow from '../svg/chevron-down-solid.svg'
@@ -10,28 +10,46 @@ import downArrow from '../svg/chevron-down-solid.svg'
 class Controls extends Component {
 
   render() {
-    const { isRunning, gameOver } = this.props
+    const { isRunning, gameOver } = this.props;
+    const controlButton = (onClick, icon) => {
+       return (
+           <button className="control-button not-selectable" onClick={(e) => {
+               onClick(e);
+           }}><img src={icon.url} alt={icon.alt}/></button>
+       )
+    };
+
+    const moveLeft = () => {
+        console.log(isRunning, gameOver)
+        if (!isRunning || gameOver) { return }
+        this.props.moveLeft()
+    };
+
+    const moveRight = () => {
+        if (!isRunning || gameOver) { return }
+        this.props.moveRight()
+    };
+
+    const rotate = () => {
+        if (!isRunning || gameOver) { return }
+        this.props.rotate()
+    };
+
+    const moveDown = () => {
+        if (!isRunning || gameOver) { return }
+        this.props.moveDown()
+    };
 
     return (
       <div className="controls">
         {/* left */}
-        <button className="control-button" onClick={(e) => {
-          console.log(isRunning, gameOver)
-          if (!isRunning || gameOver) { return }
-          this.props.moveLeft()
-        }}><img src={LeftArrow} /></button>
+        {controlButton(moveLeft, {url: leftArrow, alt: "Left Arrow Symbol"} )}
 
         {/* right */}
-        <button className="control-button" onClick={(e) => {
-          if (!isRunning || gameOver) { return }
-          this.props.moveRight()
-        }}><img src={rightArrow} /></button>
+        {controlButton(moveRight, {url: rightArrow, alt: "Right Arrow Symbol"} )}
 
         {/* rotate */}
-        <button className="control-button" onClick={(e) => {
-          if (!isRunning || gameOver) { return }
-          this.props.rotate()
-        }}><img src={rotateIcon} /></button>
+        {controlButton(rotate, {url: rotateIcon, alt: "Rotate Arrow Symbol"} )}
 
         {/* down */}
         <button className="control-button" onClick={(e) => {

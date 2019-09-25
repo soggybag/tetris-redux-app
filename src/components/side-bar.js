@@ -8,15 +8,15 @@ function SideBar(props) {
 
   return (
     <div className="score-board">
-      <div>Level: {level}</div>
+      <div className="not-selectable">Level: {level}</div>
 
-      <button className="score-board-button" onClick={(e) => {
+      <button className="score-board-button not-selectable" onClick={(e) => {
         if (gameOver) { return }
         isRunning ? pause() : resume()
       }}>{isRunning ? "Pause" : "Resume"}</button>
 
 
-      <button className="score-board-button" onClick={(e) => {
+      <button className="score-board-button not-selectable" onClick={(e) => {
         restart()
       }}>Restart</button>
 

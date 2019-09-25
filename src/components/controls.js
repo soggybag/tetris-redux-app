@@ -36,7 +36,7 @@ class Controls extends Component {
         {/* down */}
         <button className="control-button" onClick={(e) => {
           if (!isRunning || gameOver) { return }
-          this.props.moveDown()
+          this.props.moveDown() // 
         }}><img src={downArrow} /></button>
 
       </div>

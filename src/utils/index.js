@@ -110,6 +110,16 @@ export const checkRows = (grid) => {
   return { score: points[completedRows], rowsCleared: completedRows}
 }
 
+export const checkHighscore = (state) => {
+  const tetrisStore = window.localStorage;
+  const currentScore = state.score
+  const previousScore = parseInt(tetrisStore.getItem('tetris'))
+  if (currentScore > previousScore) {
+    tetrisStore.setItem('tetris', currentScore)
+  }
+  tetrisStore.setItem('tetris', currentScore)
+}
+
 // Define block shapes and their rotations as arrays.
 export const shapes = [
   // none

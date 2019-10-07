@@ -52,10 +52,10 @@ class Controls extends Component {
         {controlButton(rotate, {url: rotateIcon, alt: "Rotate Arrow Symbol"} )}
 
         {/* down */}
-        <button className="control-button" onClick={(e) => {
-          if (!isRunning || gameOver) { return }
-          this.props.moveDown() // 
-        }}><img src={downArrow} /></button>
+        <button className="control-button" 
+        onClick={moveDown}
+        >
+          <img alt="Move Down Arrow" src={downArrow} /></button>
 
       </div>
     )

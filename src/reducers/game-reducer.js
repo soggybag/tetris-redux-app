@@ -1,6 +1,6 @@
 import {
   MOVE_RIGHT, MOVE_LEFT, MOVE_DOWN, ROTATE,
-  PAUSE, RESUME, RESTART, GAME_OVER
+  PAUSE, RESUME, RESTART
 } from '../actions'
 
 import {
@@ -9,7 +9,9 @@ import {
   canMoveTo,
   addBlockToGrid,
   randomShape,
-  checkRows } from '../utils'
+  checkRows,
+  checkHighscore } from '../utils'
+
 
 const gameReducer = (state = defaultState(), action) => {
   const { shape, grid, x, y, rotation, nextShape, score, linesCleared, isRunning } = state
@@ -55,6 +57,8 @@ const gameReducer = (state = defaultState(), action) => {
         const newState = { ...state }
         newState.shape = 0
         newState.grid = newGrid
+        // set high score 
+        checkHighscore(state)
         return { ...state, gameOver: true }
       }
 
@@ -82,10 +86,6 @@ const gameReducer = (state = defaultState(), action) => {
     case PAUSE:
 
       return { ...state, isRunning: false }
-
-    case GAME_OVER:
-
-      return state
 
     case RESTART:
 

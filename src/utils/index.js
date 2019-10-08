@@ -35,7 +35,7 @@ export const defaultState = () => {
     isRunning: true,
     score: 0,
     linesCleared: 0,
-    level: 1, 
+    level: 1,
     speed: 1000,
     gameOver: false
   }
@@ -48,6 +48,29 @@ export const nextRotation = (shape, rotation) => {
 
 export const canMoveTo = (shape, grid, x, y, rotation) => {
   const currentShape = shapes[shape][rotation]
+
+  let max_x = 0 // right most x
+  let min_x = 3 // left most x
+  for ( let r = 0; r < 4 ; r++){
+    for ( let c = 0; c < 4; c++){
+      if(currentShape[r][c] == 1){
+        if(max_x < c){
+          max_x = c
+        }
+        if( min_x > c){
+          min_x = c
+        }
+      }
+    }
+  }
+  console.log(("max_x:" + (x + max_x)))
+  console.log(("min_x:" + (x + min_x)))
+
+  if(min_x + x < 0 || max_x + x > 9){
+    console.log("shape out of bounds")
+    return false
+  }
+
   // Loop through all rows and cols of the **shape**
   for (let row = 0; row < currentShape.length; row++) {         // Loop through rows
     for (let col = 0; col < currentShape[row].length; col++) {  // Loop through cols

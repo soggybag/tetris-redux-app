@@ -8,12 +8,45 @@ import rotateIcon from '../svg/sync-alt-solid.svg'
 import downArrow from '../svg/chevron-down-solid.svg'
 
 class Controls extends Component {
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyboardActions)
+  }
+
+  handleKeyboardActions = (event) => {
+    const { isRunning, gameOver } = this.props;
+    if (!isRunning || gameOver) { return }
+
+    switch (event.keyCode) {
+       case 38: { // up
+         //Prevent default window scroll on Up/Down arrow, SpaceBar key press
+         event.preventDefault();
+         this.props.rotate();
+         break;
+       }
+       case 40: { // down
+         event.preventDefault();
+         this.props.rotate();
+         break;
+       }
+       case 37: this.props.moveLeft(); break;
+       case 39: this.props.moveRight(); break;
+       case 32: { // space-bar
+         event.preventDefault();
+         this.props.moveDown();
+         break;
+       }
+    }
+  };
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', () => {console.log("removed")});
+  }
 
   render() {
     const { isRunning, gameOver } = this.props;
-    const controlButton = (onClick, icon) => {
+    const controlButton = (onClick, icon, title) => {
        return (
-           <button className="control-button not-selectable" onClick={(e) => {
+           <button className="control-button not-selectable" title={title} onClick={(e) => {
                onClick(e);
            }}><img src={icon.url} alt={icon.alt}/></button>
        )
@@ -43,16 +76,16 @@ class Controls extends Component {
     return (
       <div className="controls">
         {/* left */}
-        {controlButton(moveLeft, {url: leftArrow, alt: "Left Arrow Symbol"} )}
+        {controlButton(moveLeft, {url: leftArrow, alt: "Left Arrow Symbol"}, "Left Key" )}
 
         {/* right */}
-        {controlButton(moveRight, {url: rightArrow, alt: "Right Arrow Symbol"} )}
+        {controlButton(moveRight, {url: rightArrow, alt: "Right Arrow Symbol"}, "Right Key" )}
 
         {/* rotate */}
-        {controlButton(rotate, {url: rotateIcon, alt: "Rotate Arrow Symbol"} )}
+        {controlButton(rotate, {url: rotateIcon, alt: "Rotate Arrow Symbol"}, "Up/Down Key" )}
 
         {/* down */}
-        <button className="control-button" 
+        <button className="control-button" title="Space Bar"
         onClick={moveDown}
         >
           <img alt="Move Down Arrow" src={downArrow} /></button>

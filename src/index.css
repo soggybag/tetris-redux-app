@@ -299,6 +299,11 @@ a:visited {
   /* height: 100%; */
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .row {
   margin-top: 4em;
   margin-left: 4em;

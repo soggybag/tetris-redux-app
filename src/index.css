@@ -299,6 +299,10 @@ a:visited {
   /* height: 100%; */
 }
 
+.footer-container h1 {
+  font-size: 16pt;
+}
+
 ul {
   list-style: none;
   padding-left: 0;

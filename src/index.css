@@ -280,6 +280,7 @@ body {
 
 a {
   color: var(--color-3);
+  text-decoration: none;
 }
 
 a:active {

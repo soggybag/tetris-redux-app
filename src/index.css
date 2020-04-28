@@ -278,8 +278,16 @@ body {
   display: flex;
 }
 
+a {
+  color: var(--color-3);
+}
+
+a:active {
+  color: var(--color-5);
+}
+
 a:visited {
-  color: var(--color-med-1);
+  color: var(--color-med-4);
 }
 
 .footer-container {
